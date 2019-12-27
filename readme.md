@@ -32,8 +32,7 @@ The knowledge of principle can be referred here
 
 #### matrix
 
-[matrix](https://github.com/wangce888/pycontrol/blob/master/docs/matrix/matrix.py)$\quad$ [geometry](https://github.com/wangce888/pycontrol/blob/master/docs/matrix/geometry.py)$\quad$[Lie group lie algebra](https://github.com/wangce888/pycontrol/blob/master/docs/matrix/lie.py)$\quad$[plotTrajectory](https://github.com/wangce888/pycontrol/blob/master/docs/matrix/plotTrajectory.py)$\quad$[trajectoryError](https://github.com/wangce888/pycontrol/blob/master/docs/matrix/trajectoryError.py)
+[matrix](https://github.com/wangce888/pycontrol/blob/master/docs/matrix/matrix.py)&emsp; &emsp;[geometry](https://github.com/wangce888/pycontrol/blob/master/docs/matrix/geometry.py)&emsp;&emsp;[Lie group lie algebra](https://github.com/wangce888/pycontrol/blob/master/docs/matrix/lie.py)&emsp;&emsp;[plotTrajectory](https://github.com/wangce888/pycontrol/blob/master/docs/matrix/plotTrajectory.py)&emsp;&emsp;[trajectoryError](https://github.com/wangce888/pycontrol/blob/master/docs/matrix/trajectoryError.py)
 
-<img src="https://github.com/wangce888/pycontrol/blob/master/docs/matrix/data/trajectory.png" style="zoom: 15%;" />
-
+<img src="https://github.com/wangce888/pycontrol/blob/master/docs/matrix/data/trajectory.png" style="zoom:15%;" />
 <img src="https://github.com/wangce888/pycontrol/blob/master/docs/matrix/data/trajectoryError.png" style="zoom:15%;" />
