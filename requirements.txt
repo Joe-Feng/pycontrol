@@ -5,3 +5,4 @@ PyOpenGL
 pybind11
 Pillow
 numba
+python-pcl

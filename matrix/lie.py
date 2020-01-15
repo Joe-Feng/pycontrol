@@ -3,6 +3,7 @@ from pycontrol.matrix import transform
 from pycontrol.matrix import matrix as mat
 from pycontrol.math import complex
 from pycontrol import params
+import numba as nb
 
 
 def SO3_R(R):
@@ -78,6 +79,7 @@ def SO3_mul_SO3(SO3_1, SO3_2):
     return complex.quaternion_mul(SO3_1, SO3_2)
 
 
+@nb.njit()
 def SO3_mul_p(SO3, p):
     """
     SO(3)与点的乘法
@@ -243,6 +245,8 @@ def SE3_mul_SE3(SE3_1, SE3_2):
 
     return np.append(t, r)
 
+
+@nb.njit()
 def SE3_mul_p(SE3, p):
     """
     SE(3)与点的乘法

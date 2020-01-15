@@ -36,3 +36,16 @@ The knowledge of principle can be referred here
 
 <img src="https://github.com/wangce888/pycontrol/blob/master/docs/matrix/data/trajectory.png" style="zoom:15%;" />
 <img src="https://github.com/wangce888/pycontrol/blob/master/docs/matrix/data/trajectoryError.png" style="zoom:15%;" />
+
+
+
+#### cv
+
+[undistortImage](https://github.com/wangce888/pycontrol/blob/master/docs/cv/undistortImage.py)&emsp;&emsp;[stereoVision](https://github.com/wangce888/pycontrol/blob/master/docs/cv/stereoVision.py)&emsp;&emsp;[jointMap_pangolin](https://github.com/wangce888/pycontrol/blob/master/docs/cv/jointMap_pangolin.py)&emsp;&emsp;[jointMap_pcl](https://github.com/wangce888/pycontrol/blob/master/docs/cv/jointMap_pcl.py)&emsp;&emsp;
+
+
+
+#### dl
+
+[activation](https://github.com/wangce888/pycontrol/blob/master/docs/dl/activation.py)&emsp;&emsp;
+

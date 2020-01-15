@@ -8,3 +8,7 @@ axis_Y = 'Y'
 axis_X = 'X'
 
 sys_min = 1e-30
+
+random = 'random'
+biKmeans = 'biKmeans'
+kmeanspp = 'kmeans++'

@@ -1,6 +1,6 @@
 from pycontrol.matrix import judge
 import numpy as np
-
+import numba as nb
 
 
 def quaternion_add(q1, q2):
@@ -31,6 +31,7 @@ def quaternion_sub(q1, q2):
     return q1 - q2
 
 
+@nb.njit()
 def quaternion_mul(q1, q2):
     '''
     四元数乘法
@@ -48,6 +49,7 @@ def quaternion_mul(q1, q2):
     return -1*np.array([w,x,y,z])
 
 
+@nb.njit()
 def quaternion_modulus(q):
     '''
     四元数的模
@@ -58,6 +60,8 @@ def quaternion_modulus(q):
 
     return np.sqrt(w*w + x*x + y*y + z*z)
 
+
+@nb.njit()
 def quaternion_conjugate(q):
     '''
     四元数的共轭
@@ -68,6 +72,8 @@ def quaternion_conjugate(q):
 
     return np.array([w, -x, -y, -z])
 
+
+@nb.njit()
 def quaternion_inverse(q):
     '''
     四元数的逆

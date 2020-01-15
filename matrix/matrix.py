@@ -1,5 +1,4 @@
 import numpy as np
-import copy
 from pycontrol.matrix import judge
 
 
@@ -67,7 +66,7 @@ def transpose(matrix):
     '''
     return matrix.transpose()
 
-# TODO 自己实现
+
 def sum(matrix):
     return matrix.sum()
 

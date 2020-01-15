@@ -1,8 +1,10 @@
 import numpy as np
-from pycontrol.matrix import judge, dproc
+from pycontrol.matrix import judge
 from pycontrol.matrix import matrix as mat
 from pycontrol import params
 from pycontrol.math import complex
+from pycontrol.data_science import dproc
+import numba as nb
 
 
 def rotate_R(R, p):
@@ -315,14 +317,14 @@ def quaternion2R(q):
     return R
 
 
-
+@nb.njit()
 def rotate_quaternion(q, p):
     '''
     利用四元数进行旋转
     -----------------------
     Using quaternions for rotation
     '''
-    p = np.insert(p, 0, [0])
+    p = np.concatenate((np.array([0]), p))
 
     q_inv = complex.quaternion_inverse(q)
     q_mul_p = complex.quaternion_mul(q, p)
@@ -330,4 +332,20 @@ def rotate_quaternion(q, p):
 
     return p_rotated[1:]
 
+
+
+def mirror(omega, p):
+    """
+    将向量p沿着与单位向量omega垂直的方向做镜像变换
+    ----------------------------------------------
+    The vector p is mirrored in the direction perpendicular to the unit vector Omega
+    """
+    assert omega.shape == (3,) and p.shape==(3,)
+    omega = dproc.normalize(omega)
+    omega = omega[np.newaxis, :]
+    p = p[np.newaxis, :]
+
+    I = np.eye(3)
+    H = I - 2*np.matmul(mat.transpose(omega), omega)
+    return np.matmul(H, mat.transpose(p)).squeeze()
 
