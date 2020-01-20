@@ -1,5 +1,6 @@
 import numpy as np
 from pycontrol.matrix import judge
+from pycontrol.data_science import dproc
 
 
 
@@ -208,7 +209,7 @@ def schmidt_ort(matrix):
             matrix[:,k] -= \
                 np.matmul(m_copy[:,k], matrix[:,i])/np.matmul(matrix[:,i], matrix[:,i]) * \
                 matrix[:,i]
-        matrix[:,k] = normalize(matrix[:,k])
+        matrix[:,k] = dproc.normalize(matrix[:,k])
 
     return matrix
 

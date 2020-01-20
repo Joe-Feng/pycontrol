@@ -150,8 +150,8 @@ def se3_J(vector, theta):
     vector_hat = mat.cross_product_matrix(np.squeeze(vector))
     I = np.eye(3)
 
-    J = (np.sin(theta)/theta)*I+\
-        (1-np.sin(theta)/theta)*np.matmul(vector,vector_T)+\
+    J = (np.sin(theta)/theta)*I + \
+        (1-np.sin(theta)/theta)*np.matmul(vector,vector_T) + \
         (1-np.cos(theta))/theta*vector_hat
 
     return J

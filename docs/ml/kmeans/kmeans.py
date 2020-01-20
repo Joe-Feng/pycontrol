@@ -21,11 +21,15 @@ y_pred = ml.kmeans(X, n_clusters=n_clusters, init=params.kmeanspp)
 
 
 colors = ['red', 'yellow', 'blue', 'green']
+legend = ['0', '1', '2', '3']
 
 plt.figure()
 for i in range(n_clusters):
     inds = np.where(y_pred == i)[0]
     plt.scatter(X[inds,0], X[inds,1], color=colors[i])
+
+plt.title('kmeans')
+plt.legend(legend)
 plt.show()
 
 

@@ -16,9 +16,9 @@ def euclidean_dist(array1, array2=None):
     if np.ndim(array1) != 2 or np.ndim(array2) != 2:
         raise ValueError('array1 and array2 must be 2 dims')
 
-    square1 = np.sum(np.square(array1), axis=1)[..., np.newaxis]
-    square2 = np.sum(np.square(array2), axis=1)[np.newaxis, ...]
-    square_dist = square1 + square2 - 2*np.matmul(array1, array2.T)
+    square1 = np.sum(np.square(array1), axis=1)[..., np.newaxis]      # x^2
+    square2 = np.sum(np.square(array2), axis=1)[np.newaxis, ...]      # y^2
+    square_dist = square1 + square2 - 2*np.matmul(array1, array2.T)   # x^2 + y^2 - 2xy
     square_dist[square_dist < 0] = 0
     dist = np.sqrt(square_dist)
 

@@ -5,12 +5,7 @@ from pycontrol import params
 
 
 
-def kmeans(X, n_clusters, init=params.kmeanspp, max_iter=300):
-    n_samples, n_features = X.shape
-
-    # 选择初始簇中心点
-    # Select initial cluster center point
-    # TODO 其他初始化簇新方法
+def get_clusters(X, n_samples, n_features, n_clusters, init):
     if init == params.random:
         index_clusters = random.sample(range(0,n_samples), n_clusters)
         clusters = X[index_clusters]
@@ -37,6 +32,16 @@ def kmeans(X, n_clusters, init=params.kmeanspp, max_iter=300):
                     clusters = np.append(clusters, X[index:index+1, :], axis=0)
                     break
 
+    return clusters
+
+
+def kmeans(X, n_clusters, init=params.kmeanspp, max_iter=300):
+    n_samples, n_features = X.shape
+
+    # 选择初始簇中心点
+    # Select initial cluster center point
+    # TODO 其他初始化簇新方法
+    clusters = get_clusters(X, n_samples, n_features, n_clusters, init)
 
     y_temp = np.zeros(shape=(n_samples,), dtype=np.int)
     for iter in range(max_iter):
