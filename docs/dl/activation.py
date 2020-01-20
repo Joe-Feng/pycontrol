@@ -1,5 +1,6 @@
 from pycontrol import dl
 import numpy as np
+import copy
 import torch
 import matplotlib.pyplot as plt
 
@@ -10,17 +11,17 @@ def plot(x):
 
     fig.add_subplot(221)
     plt.title('relu')
-    y = show_relu(x)
+    y = show_relu(copy.deepcopy(x))
     plt.plot(x, y)
 
     fig.add_subplot(222)
     plt.title('sigmoid')
-    y = show_sigmoid(x)
+    y = show_sigmoid(copy.deepcopy(x))
     plt.plot(x, y)
 
     fig.add_subplot(223)
     plt.title('tanh')
-    y = show_tanh(x)
+    y = show_tanh(copy.deepcopy(x))
     plt.plot(x, y)
 
     plt.show()
@@ -41,4 +42,6 @@ def show_tanh(x):
 if __name__ == '__main__':
     x = torch.arange(-5, 5, step=0.1, dtype=torch.float64)
     plot(x)
+
+
 

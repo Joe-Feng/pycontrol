@@ -1,4 +1,4 @@
-pycontrol
+## pycontrol
 
 ​	Pycontrol is a library of vision, control, mathematics, machine learning, deep learning and other aspects. Adapted the 14 lectures of Gao Xiang slam into Python version. It is the knowledge I summarized in the learning process.
 
@@ -44,7 +44,7 @@ The knowledge of principle can be referred here
 
 ![](https://github.com/wangce888/pycontrol/blob/master/docs/cv/data/jointMap.png)
 
-image_processing：
+image_processing：  
 [filtering](https://github.com/wangce888/pycontrol/blob/master/docs/cv/image_processing/filtering.py)&emsp;&emsp;
 
 
