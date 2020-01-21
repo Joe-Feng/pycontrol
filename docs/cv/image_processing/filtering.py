@@ -3,7 +3,7 @@ import cv2
 import time
 
 
-image = cv2.imread('./data/1.jpg', cv2.IMREAD_COLOR)
+image = cv2.imread('../data/window.jpg')
 
 start = time.time()
 # 均值滤波
@@ -22,8 +22,6 @@ cv2.imshow('src', image)
 cv2.imshow('mean blur', dst1)
 cv2.imshow('gaussian blur', dst2)
 cv2.waitKey()
-
-
 
 
 

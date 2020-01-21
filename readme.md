@@ -72,4 +72,3 @@ image_processing：
 [fitting_curve](https://github.com/wangce888/pycontrol/blob/master/docs/nonlinear_optim/fitting_curve.py)&emsp;&emsp;[fitting_curve_ceres](https://github.com/wangce888/pycontrol/blob/master/docs/nonlinear_optim/fitting_curve_ceres.py)&emsp;&emsp;
 
 ![](https://github.com/wangce888/pycontrol/blob/master/docs/nonlinear_optim/data/fitting_curve.png)
-

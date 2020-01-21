@@ -1,6 +1,7 @@
 import numpy as np
 from pycontrol.matrix import judge
 from pycontrol.data_science import dproc
+from pycontrol import params
 
 
 
@@ -108,8 +109,6 @@ def adjoint_det(matrix):
 
 
 
-
-
 def adjoint(matrix):
     '''
     求矩阵的伴随矩阵
@@ -209,7 +208,7 @@ def schmidt_ort(matrix):
             matrix[:,k] -= \
                 np.matmul(m_copy[:,k], matrix[:,i])/np.matmul(matrix[:,i], matrix[:,i]) * \
                 matrix[:,i]
-        matrix[:,k] = dproc.normalize(matrix[:,k])
+        matrix[:,k] = dproc.normalize(matrix[:,k], params.norm_L2)
 
     return matrix
 

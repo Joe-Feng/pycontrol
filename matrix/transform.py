@@ -210,7 +210,7 @@ def rotate_axis_angle(axis_vector, theta, p=None):
     -------------------------
     The transformation of axis angle into rotation matrix (Rodrigues's formula)
     '''
-    axis_vector = dproc.normalize(axis_vector)
+    axis_vector = dproc.normalize(axis_vector, params.norm_L2)
     Kx = axis_vector[0]
     Ky = axis_vector[1]
     Kz = axis_vector[2]
@@ -263,7 +263,7 @@ def axis_angle2quaternion(axis_vector, theta):
     ----------------------
     Axis angle to quaternion
     '''
-    axis_vector = dproc.normalize(axis_vector)
+    axis_vector = dproc.normalize(axis_vector, params.norm_L2)
 
     w = np.cos(theta / 2)
     x = axis_vector[0] * np.sin(theta / 2)
@@ -341,7 +341,7 @@ def mirror(omega, p):
     The vector p is mirrored in the direction perpendicular to the unit vector Omega
     """
     assert omega.shape == (3,) and p.shape==(3,)
-    omega = dproc.normalize(omega)
+    omega = dproc.normalize(omega, params.norm_L2)
     omega = omega[np.newaxis, :]
     p = p[np.newaxis, :]
 

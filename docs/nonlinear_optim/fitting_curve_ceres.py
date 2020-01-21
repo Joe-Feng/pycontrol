@@ -1,8 +1,6 @@
 from pycontrol import ceres
 import numpy as np
 import torch
-from pycontrol import mat
-import matplotlib.pyplot as plt
 import time
 
 
@@ -65,7 +63,9 @@ if __name__ == '__main__':
     options.linear_solver_type = ceres.DENSE_NORMAL_CHOLESKY
     options.minimizer_progress_to_stdout = True
 
+    start = time.time()
     solver = ceres.Solver(options, problem)
+    print('time: ', time.time() - start)
 
     print('real abc: {}'.format([ar, br, cr]))
     print('estimated abc: {}'.format(solver.estimated_params))

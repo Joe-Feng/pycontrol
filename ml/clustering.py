@@ -6,7 +6,7 @@ from pycontrol import params
 
 
 def get_clusters(X, n_samples, n_features, n_clusters, init):
-    if init == params.random:
+    if init == params.kmeansRandom:
         index_clusters = random.sample(range(0,n_samples), n_clusters)
         clusters = X[index_clusters]
     elif init == params.kmeanspp:
