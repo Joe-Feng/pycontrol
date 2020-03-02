@@ -1,10 +1,8 @@
 ## pycontrol
-<<<<<<< HEAD
-​	Pycontrol is a library of vision, control, mathematics, machine learning, deep learning and other aspects. Adapted the 14 lectures of Gao Xiang slam into Python version. It is the knowledge I summarized in the learning process.
-=======
+
 
 ​	Pycontrol is a library that implement vision, control, mathematics, machine learning, deep learning and other aspects from scratch. Adapted the 14 lectures of Gao Xiang slam into Python version. It is the knowledge I summarized in the learning process.
->>>>>>> 913afbaa0e003295ed24888b80607348f3d472fa
+
 
 ​	This library is very convenient to use, but there may be some bugs, so it can only be used as a learning tool, not applied in engineering. If you encounter something wrong or difficult to understand, please discuss it in the discussion area.
 
