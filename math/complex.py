@@ -86,3 +86,34 @@ def quaternion_inverse(q):
 
     return q_inv
 
+
+
+def complex_add(x1, y1, x2, y2):
+    Re = x1+x2
+    Im = y1+y2
+    return Re, Im
+
+def complex_sub(x1, y1, x2, y2):
+    Re = x1-x2
+    Im = y1-y2
+    return Re, Im
+
+def complex_mul(x1, y1, x2, y2):
+    Re = x1*x2 - y1*y2
+    Im = x1*y2 + x2*y1
+    return Re, Im
+
+def complex_div(x1, y1, x2, y2):
+    Re = (x1*x2 + y1*y2) / (x2*x2 + y2*y2)
+    Im = (x2*y1 - x1*y2) / (x2*x2 + y2*y2)
+    return Re, Im
+
+
+def complex_modulus(x, y):
+    m = np.sqrt(x*x + y*y)
+    return m
+
+
+def complex_conj(x, y):
+    return x, -y
+

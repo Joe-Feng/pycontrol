@@ -3,7 +3,7 @@ from pycontrol import params
 
 
 
-def normalize(X, normType=params.norm_L2, dataType=params.batch_feature):
+def normalize(X, alpha=None, beta=None, normType=params.norm_L2, dataType=params.batch_feature):
     '''
     规范化
     '''
@@ -20,14 +20,14 @@ def normalize(X, normType=params.norm_L2, dataType=params.batch_feature):
             minValue = np.min(X, axis=1, keepdims=True)
             maxValue = np.max(X, axis=1, keepdims=True)
 
-            norm = (X - minValue) / (maxValue - minValue)
+            norm = (X - minValue)*(beta - alpha) / (maxValue - minValue) + alpha
             return norm
 
         elif dataType == params.image:
             minValue = np.min(X)
             maxValue = np.max(X)
 
-            norm = (X - minValue) / (maxValue - minValue)
+            norm = (X - minValue)*(beta - alpha) / (maxValue - minValue) + alpha
             return norm
 
 

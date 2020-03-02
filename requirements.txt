@@ -5,5 +5,5 @@ opencv-contrib-python
 PyOpenGL
 pybind11
 Pillow
-numba
+numba==0.48.0
 python-pcl

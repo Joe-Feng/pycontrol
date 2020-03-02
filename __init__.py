@@ -6,3 +6,5 @@ import pycontrol.data_science as data
 import pycontrol.ml
 import pycontrol.params
 from pycontrol.math import ceres
+import pycontrol.control
+import pycontrol.data_structure
