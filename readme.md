@@ -21,7 +21,7 @@ The knowledge of principle can be referred here
 
 
 
-### examples
+## examples
 
 #### math
 [quaternion](https://github.com/wangce888/pycontrol/blob/master/docs/math/quaternion.py)
@@ -52,9 +52,15 @@ features：
 
 
 #### ml
+clustering：  
 [kmeans](https://github.com/wangce888/pycontrol/blob/master/docs/ml/kmeans/kmeans.py)&emsp;&emsp;
 
 ![](https://github.com/wangce888/pycontrol/blob/master/docs/ml/data/kmeans.png)
+regression：  
+[Least_squares](https://github.com/wangce888/pycontrol/blob/master/docs/ml/Least_squares/Least_squares.py)&emsp;&emsp;[LS_svd](https://github.com/wangce888/pycontrol/blob/master/docs/ml/Least_squares/LS_svd.py)&emsp;&emsp;
+
+![](https://github.com/wangce888/pycontrol/blob/master/docs/ml/data/LS_svd.png)
+
 
 
 
@@ -77,3 +83,8 @@ features：
 
 ![](https://github.com/wangce888/pycontrol/blob/master/docs/control/path_planning/data/Dijkstra.png)
 
+
+
+#### data structure
+graph：  
+[Dijkstra](https://github.com/wangce888/pycontrol/blob/master/docs/data_structure/graph/Dijkstra.py)

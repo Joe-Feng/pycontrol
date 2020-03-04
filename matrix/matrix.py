@@ -199,6 +199,7 @@ def schmidt_ort(matrix):
     ------------------
     schmidt orthogonalization
     '''
+    matrix = matrix.astype(np.float64)
     w = matrix.shape[1]
     m_copy = matrix.copy()
     matrix = matrix.copy()
@@ -222,6 +223,40 @@ def schmidt_qr(matrix):
     R = np.matmul(Q.transpose(), matrix)
 
     return Q, R
+
+
+def diagonalize(matrix):
+    """
+    矩阵相似对角化，结果按特征值从大到小排列
+    ----------------------------------------
+    The matrix is similarly diagonalized,
+    and the results are arranged in descending order of eigenvalues
+    """
+    vals, vecs = np.linalg.eig(matrix)
+
+    argsort = np.argsort(-vals)
+    vals = vals[argsort]
+    vecs = (vecs.T[argsort]).T
+
+    P = vecs
+
+    return P, vals, np.linalg.inv(P)
+
+
+
+def svd(matrix):
+    AAT = np.matmul(matrix, matrix.T)
+    U, D1, U_T = diagonalize(AAT)
+
+    ATA = np.matmul(matrix.T, matrix)
+    V, D2, V_T = diagonalize(ATA)
+
+    D2[D2 < params.sys_min] = 0
+    D = np.sqrt(D2)
+
+    return U, D, V_T
+
+
 
 # TODO 完成
 def householder_qr():

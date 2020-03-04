@@ -6,6 +6,9 @@ import numba as nb
 
 @nb.njit()
 def flipud(src):
+    """
+    上下翻转
+    """
     shape = src.shape
     dtype = src.dtype
 
@@ -20,6 +23,9 @@ def flipud(src):
 
 @nb.njit()
 def fliplr(src):
+    """
+    左右翻转
+    """
     shape = src.shape
     dtype = src.dtype
 
