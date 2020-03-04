@@ -23,27 +23,27 @@ The knowledge of principle can be referred here
 
 ## examples
 
-#### math
+### math
 [quaternion](https://github.com/wangce888/pycontrol/blob/master/docs/math/quaternion.py)
 
 
 
-#### matrix
+### matrix
 [matrix](https://github.com/wangce888/pycontrol/blob/master/docs/matrix/matrix.py)&emsp; &emsp;[geometry](https://github.com/wangce888/pycontrol/blob/master/docs/matrix/geometry.py)&emsp;&emsp;[Lie group lie algebra](https://github.com/wangce888/pycontrol/blob/master/docs/matrix/lie.py)&emsp;&emsp;[plotTrajectory](https://github.com/wangce888/pycontrol/blob/master/docs/matrix/plotTrajectory.py)&emsp;&emsp;[trajectoryError](https://github.com/wangce888/pycontrol/blob/master/docs/matrix/trajectoryError.py)
 
 ![](https://github.com/wangce888/pycontrol/blob/master/docs/matrix/data/trajectory.png)
 
 
 
-#### cv
+### cv
 [undistortImage](https://github.com/wangce888/pycontrol/blob/master/docs/cv/undistortImage.py)&emsp;&emsp;[stereoVision](https://github.com/wangce888/pycontrol/blob/master/docs/cv/stereoVision.py)&emsp;&emsp;[jointMap_pangolin](https://github.com/wangce888/pycontrol/blob/master/docs/cv/jointMap_pangolin.py)&emsp;&emsp;[jointMap_pcl](https://github.com/wangce888/pycontrol/blob/master/docs/cv/jointMap_pcl.py)&emsp;&emsp;
 
 ![](https://github.com/wangce888/pycontrol/blob/master/docs/cv/data/jointMap.png)
 
-image_processing：  
+**image_processing**  
 [filtering](https://github.com/wangce888/pycontrol/blob/master/docs/cv/image_processing/filtering.py)&emsp;&emsp;
 
-features：  
+**features**  
 [Harris_corner_detector](https://github.com/wangce888/pycontrol/blob/master/docs/cv/features/Harris_corner_detector.py)&emsp;&emsp;[SIFT_feature_detector](https://github.com/wangce888/pycontrol/blob/master/docs/cv/features/SIFT_feature_detector.py)&emsp;&emsp;[ORB_feature_detector](https://github.com/wangce888/pycontrol/blob/master/docs/cv/features/ORB_feature_detector.py)&emsp;&emsp;
 
 ![](https://github.com/wangce888/pycontrol/blob/master/docs/cv/data/harris.png)
@@ -51,12 +51,13 @@ features：
 
 
 
-#### ml
-clustering：  
+### ml
+**clustering**  
 [kmeans](https://github.com/wangce888/pycontrol/blob/master/docs/ml/kmeans/kmeans.py)&emsp;&emsp;
 
-![](https://github.com/wangce888/pycontrol/blob/master/docs/ml/data/kmeans.png)
-regression：  
+![](https://github.com/wangce888/pycontrol/blob/master/docs/ml/data/kmeans.png)  
+
+**regression**  
 [Least_squares](https://github.com/wangce888/pycontrol/blob/master/docs/ml/Least_squares/Least_squares.py)&emsp;&emsp;[LS_svd](https://github.com/wangce888/pycontrol/blob/master/docs/ml/Least_squares/LS_svd.py)&emsp;&emsp;
 
 ![](https://github.com/wangce888/pycontrol/blob/master/docs/ml/data/LS_svd.png)
@@ -64,27 +65,27 @@ regression：
 
 
 
-#### dl
+### dl
 [activation](https://github.com/wangce888/pycontrol/blob/master/docs/dl/activation.py)&emsp;&emsp;
 
 ![](https://github.com/wangce888/pycontrol/blob/master/docs/dl/data/activation.png)
 
 
 
-#### nonlinear optimization
+### nonlinear optimization
 [fitting_curve](https://github.com/wangce888/pycontrol/blob/master/docs/nonlinear_optim/fitting_curve.py)&emsp;&emsp;[fitting_curve_ceres](https://github.com/wangce888/pycontrol/blob/master/docs/nonlinear_optim/fitting_curve_ceres.py)&emsp;&emsp;
 
 ![](https://github.com/wangce888/pycontrol/blob/master/docs/nonlinear_optim/data/fitting_curve.png)
 
 
 
-#### path planning
+### path planning
 [Dijkstra](https://github.com/wangce888/pycontrol/blob/master/docs/control/path_planning/Dijkstra.py)
 
 ![](https://github.com/wangce888/pycontrol/blob/master/docs/control/path_planning/data/Dijkstra.png)
 
 
 
-#### data structure
+### data structure
 graph：  
 [Dijkstra](https://github.com/wangce888/pycontrol/blob/master/docs/data_structure/graph/Dijkstra.py)
