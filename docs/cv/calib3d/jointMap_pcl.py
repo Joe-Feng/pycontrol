@@ -8,7 +8,7 @@ import time
 import os
 
 
-filename = './data/pose.txt'
+filename = '../data/pose.txt'
 
 fx = 518.0
 fy = 519.0
@@ -25,9 +25,9 @@ def showPointCloud(pointcloud):
     pointcloud = pointcloud[:,:3].astype(np.float32)
     # cloud = pcl.PointCloud_PointXYZRGB(pointcloud)
     cloud = pcl.PointCloud(pointcloud)
-    pcl.save_XYZRGBA(cloud, './data/map.pcd', format='pcd')
+    pcl.save_XYZRGBA(cloud, '../data/map.pcd', format='pcd')
 
-    os.system('pcl_viewer_release ./data/map.pcd')
+    os.system('pcl_viewer_release ../data/map.pcd')
 
 
 def read_file(filename):
@@ -48,9 +48,9 @@ if __name__ == '__main__':
     colorImgs = nb.typed.List()
     depthImgs = nb.typed.List()
     for i in range(5):
-        color_img = cv2.imread('./data/color/'+str(i+1)+'.png')
+        color_img = cv2.imread('../data/color/'+str(i+1)+'.png')
         colorImgs.append(color_img)
-        depth_img = cv2.imread('./data/depth/'+str(i+1)+'.pgm', cv2.IMREAD_UNCHANGED)
+        depth_img = cv2.imread('../data/depth/'+str(i+1)+'.pgm', cv2.IMREAD_UNCHANGED)
         depthImgs.append(depth_img)
 
     poses = read_file(filename)

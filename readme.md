@@ -39,7 +39,7 @@ The knowledge of principle can be referred here
 ### cv
 
 * **calib3d**  
-[undistortImage](https://github.com/wangce888/pycontrol/blob/master/docs/cv/undistortImage.py)&emsp;&emsp;[stereoVision](https://github.com/wangce888/pycontrol/blob/master/docs/cv/stereoVision.py)&emsp;&emsp;[jointMap_pangolin](https://github.com/wangce888/pycontrol/blob/master/docs/cv/jointMap_pangolin.py)&emsp;&emsp;[jointMap_pcl](https://github.com/wangce888/pycontrol/blob/master/docs/cv/jointMap_pcl.py)&emsp;&emsp;
+[undistortImage](https://github.com/wangce888/pycontrol/blob/master/docs/cv/calib3d/undistortImage.py)&emsp;&emsp;[stereoVision](https://github.com/wangce888/pycontrol/blob/master/docs/cv/calib3d/stereoVision.py)&emsp;&emsp;[jointMap_pangolin](https://github.com/wangce888/pycontrol/blob/master/docs/cv/calib3d/jointMap_pangolin.py)&emsp;&emsp;[jointMap_pcl](https://github.com/wangce888/pycontrol/blob/master/docs/cv/calib3d/jointMap_pcl.py)&emsp;&emsp;
 
 ![](https://github.com/wangce888/pycontrol/blob/master/docs/cv/data/jointMap.png)
 
@@ -62,9 +62,10 @@ The knowledge of principle can be referred here
 ![](https://github.com/wangce888/pycontrol/blob/master/docs/ml/data/kmeans.png)  
 
 * **regression**  
-[Least_squares](https://github.com/wangce888/pycontrol/blob/master/docs/ml/Least_squares/Least_squares.py)&emsp;&emsp;[LS_svd](https://github.com/wangce888/pycontrol/blob/master/docs/ml/Least_squares/LS_svd.py)&emsp;&emsp;
+[Least_squares](https://github.com/wangce888/pycontrol/blob/master/docs/ml/Least_squares/Least_squares.py)&emsp;&emsp;[LS_svd](https://github.com/wangce888/pycontrol/blob/master/docs/ml/Least_squares/LS_svd.py)&emsp;&emsp;[LS_fitting_plane](https://github.com/wangce888/pycontrol/blob/master/docs/ml/Least_squares/LS_fitting_plane.py)&emsp;&emsp;
 
 ![](https://github.com/wangce888/pycontrol/blob/master/docs/ml/data/LS_svd.png)
+![](https://github.com/wangce888/pycontrol/blob/master/docs/ml/data/LS_fitting_plane.png)
 
 
 

@@ -11,7 +11,7 @@ from OpenGL.GL import *
 import time
 
 
-filename = './data/pose.txt'
+filename = '../data/pose.txt'
 
 fx = 518.0
 fy = 519.0
@@ -78,9 +78,9 @@ if __name__ == '__main__':
     colorImgs = nb.typed.List()
     depthImgs = nb.typed.List()
     for i in range(5):
-        color_img = cv2.imread('./data/color/'+str(i+1)+'.png')
+        color_img = cv2.imread('../data/color/'+str(i+1)+'.png')
         colorImgs.append(color_img)
-        depth_img = cv2.imread('./data/depth/'+str(i+1)+'.pgm', cv2.IMREAD_UNCHANGED)
+        depth_img = cv2.imread('../data/depth/'+str(i+1)+'.pgm', cv2.IMREAD_UNCHANGED)
         depthImgs.append(depth_img)
 
     poses = read_file(filename)

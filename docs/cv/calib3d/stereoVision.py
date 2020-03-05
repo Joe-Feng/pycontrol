@@ -19,8 +19,8 @@ K = np.array([fx, fy, cx, cy])
 b = 0.573
 
 
-left_file = './data/left.png'
-right_file = './data/right.png'
+left_file = '../data/left.png'
+right_file = '../data/right.png'
 
 
 def showPointCloud(pointcloud):

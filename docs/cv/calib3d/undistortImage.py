@@ -5,7 +5,7 @@ import time
 
 
 
-image_file = './data/distorted.png'
+image_file = '../data/distorted.png'
 
 fx = 458.654
 fy = 457.296
