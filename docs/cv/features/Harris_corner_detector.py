@@ -10,7 +10,7 @@ image = cv2.cvtColor(image_src, cv2.COLOR_BGR2GRAY)
 
 start_t = time.time()
 dst = pcv.cornerHarris(image, 3, 0.05)
-dst = data.normalize(dst, 0, 255, params.norm_minmax, params.image)
+dst = data.normalize(dst, 0, 255, normType=params.norm_minmax)
 dst = pcv.cornerNMS(dst, (7,7))
 print(time.time() - start_t)
 

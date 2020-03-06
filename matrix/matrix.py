@@ -209,7 +209,7 @@ def schmidt_ort(matrix):
             matrix[:,k] -= \
                 np.matmul(m_copy[:,k], matrix[:,i])/np.matmul(matrix[:,i], matrix[:,i]) * \
                 matrix[:,i]
-        matrix[:,k] = dproc.normalize(matrix[:,k], params.norm_L2)
+        matrix[:,k] = dproc.normalize(matrix[:,k], normType=params.norm_L2)
 
     return matrix
 

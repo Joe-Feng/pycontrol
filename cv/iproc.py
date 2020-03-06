@@ -141,7 +141,8 @@ def padding(image, old_shape, new_shape, borderType=params.border_default, value
     y1 = y0 + old_h
 
 
-    if borderType == params.border_default:
+    if borderType == params.border_default or \
+        borderType == params.border_reflect_101:
         topPadding = python.flipud(image[1:top_d+1])
         image = np.concatenate((topPadding, image), axis=0)
         bottomPadding = python.flipud(image[-1-bottom_d:-1])

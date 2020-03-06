@@ -1,6 +1,7 @@
 import numpy as np
 import numba as nb
 from pycontrol.matrix import lie
+from pycontrol import params, ml
 
 
 
@@ -136,4 +137,39 @@ def joint_map(colorImgs, depthImgs, poses, K, depthScale):
 
 
 
+
+def findEssentialMat(points1, points2, K, method=params.FM_8POINT):
+    """
+    计算本质矩阵
+    -----------------
+    calculate Essential Matrix
+    """
+    if not isinstance(points1, np.ndarray):
+        points1 = np.array(points1)
+    if not isinstance(points2, np.ndarray):
+        points2 = np.array(points2)
+
+    fx, fy, cx, cy = K
+
+    if method == params.FM_8POINT:
+        A = np.zeros(shape=(points1.shape[0], 9))
+        u1 = (points1[:, 0:1] - cx) / fx
+        v1 = (points1[:, 1:2] - cy) / fy
+        u2 = (points2[:, 0:1] - cx) / fx
+        v2 = (points2[:, 1:2] - cy) / fy
+
+        A[:, 0:1] = u2 * u1
+        A[:, 1:2] = u2 * v1
+        A[:, 2:3] = u2
+        A[:, 3:4] = v2 * u1
+        A[:, 4:5] = v2 * v1
+        A[:, 5:6] = v2
+        A[:, 6:7] = u1
+        A[:, 7:8] = v1
+        A[:, 8:9] = 1
+
+        essential_matrix = ml.least_squares(A, 0, params.LS_svd)
+        essential_matrix = essential_matrix.reshape((3, 3))
+
+    return essential_matrix
 

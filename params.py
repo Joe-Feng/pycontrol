@@ -25,10 +25,9 @@ norm_L1 = 0
 norm_L2 = 1
 norm_minmax = 2
 
-# dataType
-batch_feature = 0
-image = 1
-
 # least squares
 LS_default = 0
 LS_svd = 1
+
+# findEssentialMat
+FM_8POINT = 0
