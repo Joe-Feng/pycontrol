@@ -9,19 +9,19 @@ import time
 # true value
 A = 6.0
 B = 3.0
-C = 2.0
+C = 3.0
 
 
 N = 100
-sigma = 1.0
+sigma = 0.5
 
 np.random.seed(123)
 
 def gen_dataset():
-    data = np.random.randint(0, N, (N,2)) / N
+    data = np.random.randint(-N, N, (N,2)) / N
     x_data = data[:,0]
     y_data = data[:,1]
-    z_data = A*x_data + B*y_data + C + \
+    z_data = A*x_data*x_data + B*y_data*y_data + C + \
              np.random.normal(scale=sigma, size=(N,))
 
     return x_data, y_data, z_data
@@ -32,13 +32,15 @@ def plot(x_data, y_data, z_data, estimated):
 
     ax = plt.axes(projection='3d')
 
+    z_data = np.sqrt(z_data)
     ax.scatter3D(x_data, y_data, z_data, color='blue', depthshade=False)
 
     x_data, y_data = np.meshgrid(x_data, y_data)
-    z_pred = Ae * x_data + Be * y_data + Ce
+    z_pred = Ae * x_data*x_data + Be * y_data*y_data + Ce
+    z_pred = np.sqrt(z_pred)
     ax.plot_surface(x_data, y_data, z_pred, cmap='rainbow', shade=False)
 
-    plt.title('LS_fitting_plane')
+    plt.title('LS_fitting_surface')
     plt.show()
 
 
@@ -48,8 +50,8 @@ def solve(x_data, y_data, z_data):
     Z = z_data[..., np.newaxis]
     A = np.zeros(shape=[N,3])
 
-    A[:, 0:1] = X
-    A[:, 1:2] = Y
+    A[:, 0:1] = X*X
+    A[:, 1:2] = Y*Y
     A[:, 2:3] = 1
     b = Z
 

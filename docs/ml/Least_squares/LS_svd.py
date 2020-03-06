@@ -1,5 +1,5 @@
 import numpy as np
-from pycontrol import mat
+from pycontrol import params, ml
 import matplotlib.pyplot as plt
 import time
 
@@ -43,19 +43,13 @@ def solve(x_data, y_data):
     X = x_data[..., np.newaxis]
     Y = y_data[..., np.newaxis]
     A = np.zeros(shape=[N,3])
-    y = np.zeros(shape=(A.shape[1],1))
 
     A[:, 0:1] = np.power(X, 2)
     A[:, 1:2] = X
     A[:, 2:3] = 1
     b = Y
 
-    U, D, V_T = np.linalg.svd(A)           # SVD
-    b_hat = np.matmul(U.T, b)              # b_hat = U_T*b
-    for i in range(y.shape[0]):            # y[i] = b_hat[i] / d[i]
-        y[i][0] = b_hat[i][0] / D[i]
-
-    estimated = np.matmul(V_T.T, y)        # x = V*y
+    estimated = ml.least_squares(A, b, params.LS_svd)
 
     return estimated
 

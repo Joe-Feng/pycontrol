@@ -1,5 +1,5 @@
 import numpy as np
-from pycontrol import mat
+from pycontrol import mat, ml
 import matplotlib.pyplot as plt
 import time
 
@@ -49,9 +49,7 @@ def solve(x_data, y_data):
     A[:, 2:3] = 1
     b = Y
 
-    estimated = np.linalg.inv(np.matmul(A.T, A))
-    estimated = np.matmul(estimated, A.T)
-    estimated = np.matmul(estimated, b)
+    estimated = ml.least_squares(A, b)
 
     return estimated
 

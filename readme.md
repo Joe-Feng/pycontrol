@@ -62,11 +62,11 @@ The knowledge of principle can be referred here
 ![](https://github.com/wangce888/pycontrol/blob/master/docs/ml/data/kmeans.png)  
 
 * **regression**  
-[Least_squares](https://github.com/wangce888/pycontrol/blob/master/docs/ml/Least_squares/Least_squares.py)&emsp;&emsp;[LS_svd](https://github.com/wangce888/pycontrol/blob/master/docs/ml/Least_squares/LS_svd.py)&emsp;&emsp;[LS_fitting_plane](https://github.com/wangce888/pycontrol/blob/master/docs/ml/Least_squares/LS_fitting_plane.py)&emsp;&emsp;
+[Least_squares](https://github.com/wangce888/pycontrol/blob/master/docs/ml/Least_squares/Least_squares.py)&emsp;&emsp;[LS_svd](https://github.com/wangce888/pycontrol/blob/master/docs/ml/Least_squares/LS_svd.py)&emsp;&emsp;[LS_fitting_plane](https://github.com/wangce888/pycontrol/blob/master/docs/ml/Least_squares/LS_fitting_plane.py)&emsp;&emsp;[LS_fitting_surface](https://github.com/wangce888/pycontrol/blob/master/docs/ml/Least_squares/LS_fitting_surface.py)&emsp;&emsp;
 
 ![](https://github.com/wangce888/pycontrol/blob/master/docs/ml/data/LS_svd.png)
 ![](https://github.com/wangce888/pycontrol/blob/master/docs/ml/data/LS_fitting_plane.png)
-
+![](https://github.com/wangce888/pycontrol/blob/master/docs/ml/data/LS_fitting_surface.png)
 
 
 ### dl

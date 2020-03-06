@@ -29,3 +29,6 @@ norm_minmax = 2
 batch_feature = 0
 image = 1
 
+# least squares
+LS_default = 0
+LS_svd = 1
